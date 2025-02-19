@@ -1,7 +1,6 @@
 ﻿﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
 @using SFA.DAS.Aan.SharedUi.Models.NetworkDirectory;
 @using SFA.DAS.Aan.SharedUi.Extensions;
-@using SFA.DAS.Aan.SharedUi.Constants;
 
 @model NetworkDirectoryViewModel
 <div class="govuk-!-margin-top-0">
@@ -25,13 +24,13 @@
             <li class="das-search-results__list-item">
                 <div class="govuk-grid-row">
                     <div class="govuk-grid-column-one-half">
-                        <label class="govuk-label"><a href="@networkDirectory.MemberProfileLink" class="das-search-results__link">@networkDirectory.FullName</a></label>
+                        <span class="govuk-label"><a href="@networkDirectory.MemberProfileLink" class="das-search-results__link">@networkDirectory.FullName</a></span>
                     </div>
                     <div class="govuk-grid-column-one-quarter">
                         <strong class="govuk-tag app-tag app-tag--@networkDirectory.UserRole.ToString()">@networkDirectory.UserRole.GetDescription()</strong>
                     </div>
                     <div class="govuk-grid-column-one-quarter">
-                        <label class="govuk-label">@networkDirectory.RegionName</label>
+                        <span class="govuk-label">@networkDirectory.RegionName</span>
                     </div>
                 </div>
             </li>

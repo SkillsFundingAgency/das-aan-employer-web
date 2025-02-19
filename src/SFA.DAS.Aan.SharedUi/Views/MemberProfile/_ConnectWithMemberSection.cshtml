@@ -1,5 +1,4 @@
 ﻿@using SFA.DAS.Aan.SharedUi.Constants;
-@using SFA.DAS.Aan.SharedUi.Infrastructure;
 @using SFA.DAS.Aan.SharedUi.Models.PublicProfile;
 
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
@@ -11,42 +10,45 @@
 {
     <h1 class="govuk-heading-l govuk-!-margin-bottom-2">Connect with @Model.FirstName</h1>
     <p class="govuk-!-margin-bottom-4 govuk-!-margin-top-4 govuk-!-margin-top-2">You can contact @Model.FirstName using the form below or connect directly on LinkedIn.</p>
-    <h3 class="govuk-heading-m profile-send-message govuk-!-margin-bottom-0 connect-section-heading govuk-!-padding-2"><span class="govuk-!-margin-left-2">Send a message to @Model.FirstName</span></h3>
+    <h2 class="govuk-heading-m profile-send-message govuk-!-margin-bottom-0 connect-section-heading govuk-!-padding-2"><span class="govuk-!-margin-left-2">Send a message to @Model.FirstName</span></h2>
     <div class="profile-send-message-section govuk-!-padding-5">
         @using (Html.BeginForm(Model.ActionName, Model.ControllerName, new { id = Model.MemberId }, FormMethod.Post))
         {
             <div id="ReasonToGetInTouch" esfa-validation-marker-for="@Model.ReasonToGetInTouch" class="govuk-form-group">
-                <h3 class="govuk-heading-m govuk-!-margin-bottom-4">I would like to:</h3>
-                <span asp-validation-for="@Model.ReasonToGetInTouch" class="govuk-error-message"></span>
-                <div class="govuk-radios" data-module="govuk-radios">
-                    <div class="govuk-radios__item">
-                        <input type="radio" asp-for="@Model.ReasonToGetInTouch" id="askForAdvice" class="govuk-radios__input" value="@NotificationTemplateConstant.AANIndustryAdvice">
-                        <label class="govuk-label govuk-radios__label profile-govuk-radios" for="askForAdvice">
-                            ask for industry advice
-                        </label>
+                <h2 class="govuk-heading-m govuk-!-margin-bottom-4">I would like to:</h2>
+                <fieldset>
+                    <legend class="govuk-visually-hidden">Reasons to get in touch</legend>
+                    <span asp-validation-for="@Model.ReasonToGetInTouch" class="govuk-error-message"></span>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input type="radio" asp-for="@Model.ReasonToGetInTouch" id="askForAdvice" class="govuk-radios__input" value="@NotificationTemplateConstant.AANIndustryAdvice">
+                            <label class="govuk-label govuk-radios__label profile-govuk-radios" for="askForAdvice">
+                                ask for industry advice
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input type="radio" asp-for="@Model.ReasonToGetInTouch" id="askForHelp" class="govuk-radios__input" value="@NotificationTemplateConstant.AANAskForHelp">
+                            <label class="govuk-label govuk-radios__label profile-govuk-radios" for="askForHelp">
+                                ask for help with a network activity
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input type="radio" asp-for="@Model.ReasonToGetInTouch" id="requestCaseStudy" class="govuk-radios__input" value="@NotificationTemplateConstant.AANRequestCaseStudy">
+                            <label class="govuk-label govuk-radios__label profile-govuk-radios" for="requestCaseStudy">
+                                request a case study
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input type="radio" asp-for="@Model.ReasonToGetInTouch" id="afterMeeting" class="govuk-radios__input" value="@NotificationTemplateConstant.AANGetInTouch">
+                            <label class="govuk-label govuk-radios__label profile-govuk-radios" for="afterMeeting">
+                                get in touch after meeting at a network event
+                            </label>
+                        </div>
                     </div>
-                    <div class="govuk-radios__item">
-                        <input type="radio" asp-for="@Model.ReasonToGetInTouch" id="askForHelp" class="govuk-radios__input" value="@NotificationTemplateConstant.AANAskForHelp">
-                        <label class="govuk-label govuk-radios__label profile-govuk-radios" for="askForHelp">
-                            ask for help with a network activity
-                        </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                        <input type="radio" asp-for="@Model.ReasonToGetInTouch" id="requestCaseStudy" class="govuk-radios__input" value="@NotificationTemplateConstant.AANRequestCaseStudy">
-                        <label class="govuk-label govuk-radios__label profile-govuk-radios" for="requestCaseStudy">
-                            request a case study
-                        </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                        <input type="radio" asp-for="@Model.ReasonToGetInTouch" id="afterMeeting" class="govuk-radios__input" value="@NotificationTemplateConstant.AANGetInTouch">
-                        <label class="govuk-label govuk-radios__label profile-govuk-radios" for="afterMeeting">
-                            get in touch after meeting at a network event
-                        </label>
-                    </div>
-                </div>
+                </fieldset>
             </div>
             <div class="govuk-!-margin-top-4">
-                <h3 class="govuk-heading-m govuk-!-margin-bottom-4">By submitting this message, I agree to:</h3>
+                <h2 class="govuk-heading-m govuk-!-margin-bottom-4">By submitting this message, I agree to:</h2>
                 <div class="govuk-checkboxes govuk-checkboxes--small">
                     <div esfa-validation-marker-for="HasAgreedToSharePersonalDetails" class="govuk-form-group govuk-!-margin-bottom-1">
                         <span asp-validation-for="HasAgreedToSharePersonalDetails" class="govuk-error-message"></span>

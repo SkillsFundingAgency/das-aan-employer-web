@@ -15,7 +15,7 @@
             <h4 class="das-filter__selected-sub-heading">@filters.FieldName</h4>
             @foreach (var filter  in filters.Filters.OrderBy(x=>x.Order))
             {
-                <a href="@filter.ClearFilterLink" title="@filter.Value" class="das-filter__tag das-breakable">@filter.Value</a>
+                <a href="@filter.ClearFilterLink" class="das-filter__tag das-breakable">@filter.Value</a>
             }
         }
     </div>

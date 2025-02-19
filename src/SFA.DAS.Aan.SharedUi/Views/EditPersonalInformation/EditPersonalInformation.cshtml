@@ -26,11 +26,11 @@
             <input type="hidden" asp-for="@Model.OrganisationName" name="OrganisationName" />
             <div>
                 <div class="govuk-form-group">
-                    <h3 class="govuk-label-wrapper">
-                        <label class="govuk-label govuk-label--m govuk-!-margin-bottom-4" for="region" asp-for="RegionId">
+                    <h2 class="govuk-label-wrapper">
+                        <label class="govuk-label govuk-label--m govuk-!-margin-bottom-4" for="RegionId" asp-for="RegionId">
                             Region where you work
                         </label>
-                    </h3>
+                    </h2>
                     <select asp-for="@Model.RegionId" asp-items="@(new SelectList(Model.Regions, nameof(RegionViewModel.Id), nameof(RegionViewModel.Area)))" class="govuk-select" name="RegionId">
                     </select>
                 </div>
@@ -61,11 +61,11 @@
                 <div id="Biography" class="govuk-form-group govuk-!-margin-bottom-2">
                     <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
                         <div class="govuk-form-group">
-                            <h3 class="govuk-label-wrapper">
+                            <h2 class="govuk-label-wrapper">
                                 <label class="govuk-label govuk-label--m govuk-!-margin-bottom-3" for="biography">
                                     Add a biography
                                 </label>
-                            </h3>
+                            </h2>
                             <span asp-validation-for="Biography" class="govuk-error-message"></span>
                             <textarea id="biography" asp-for="Biography" class="govuk-textarea govuk-js-character-count" name="biography" rows="5"></textarea>
                         </div>

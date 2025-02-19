@@ -1,9 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
-@using SFA.DAS.Aan.SharedUi.Constants;
-@using SFA.DAS.Aan.SharedUi.Extensions;
 @using SFA.DAS.Aan.SharedUi.Infrastructure;
-@using SFA.DAS.Aan.SharedUi.Models;
-@using SFA.DAS.Aan.SharedUi.Models.AmbassadorProfile;
 @using SFA.DAS.Aan.SharedUi.Models.EditApprenticeshipInformation;
 @using SFA.DAS.Aan.SharedUi.TagHelpers;
 
@@ -26,25 +22,25 @@
         <form method="post" asp-route="@SharedRouteNames.EditApprenticeshipInformation" enctype="multipart/form-data" novalidate>
             <div esfa-validation-marker-for="EmployerName">
                 <div id="JobTitle" class="govuk-form-group">
-                    <h3 class="govuk-label-wrapper govuk-!-margin-top-4 govuk-!-margin-bottom-4">
+                    <h2 class="govuk-label-wrapper govuk-!-margin-top-4 govuk-!-margin-bottom-4">
                         <label class="govuk-label govuk-label--m" for="EmployerName">
                             Employer's name
                         </label>
-                    </h3>
+                    </h2>
                     <span asp-validation-for="EmployerName" class="govuk-error-message"></span>
                     <input type="text" asp-for="EmployerName" class="govuk-input" id="EmployerName" name="employerName">
                 </div>
             </div>
             <hr />
             <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                    <h3 class="govuk-label-wrapper govuk-!-margin-top-4 govuk-!-margin-bottom-4">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    <h2 class="govuk-label-wrapper govuk-!-margin-top-4 govuk-!-margin-bottom-4 govuk-label--m">
                         What is your address?
-                    </h3>
+                    </h2>
                 </legend>
                 <div esfa-validation-marker-for="EmployerAddress1">
                     <div class="govuk-form-group">
-                        <label class="govuk-label" for="EmployerTownOrCity">
+                        <label class="govuk-label" for="EmployerAddress1">
                             Address line 1
                         </label>
                         <span asp-validation-for="EmployerAddress1" class="govuk-error-message"></span>
@@ -93,9 +89,9 @@
             {
                 <div id="sector" class="govuk-form-group">
                     <h3 class="govuk-label-wrapper govuk-!-margin-top-4 govuk-!-margin-bottom-4">
-                        <label class="govuk-label govuk-label--m" for="apprenticeship-sector">
+                        <span class="govuk-label govuk-label--m">
                             Apprenticeship sector
-                        </label>
+                        </span>
                     </h3>
                     <span>
                         @Model.Sector
@@ -107,9 +103,9 @@
             {
                 <div id="programmes" class="govuk-form-group">
                     <h3 class="govuk-label-wrapper govuk-!-margin-top-4 govuk-!-margin-bottom-4">
-                        <label class="govuk-label govuk-label--m" for="apprenticeship-programme">
+                        <span class="govuk-label govuk-label--m">
                             Apprenticeship programme
-                        </label>
+                        </span>
                     </h3>
                     <span>
                         @Model.Programmes
@@ -121,9 +117,9 @@
             {
                 <div id="level" class="govuk-form-group">
                     <h3 class="govuk-label-wrapper govuk-!-margin-top-4 govuk-!-margin-bottom-4">
-                        <label class="govuk-label govuk-label--m" for="apprenticeship-level">
+                        <span class="govuk-label govuk-label--m">
                             Apprenticeship level
-                        </label>
+                        </span>
                     </h3>
                     @Model.Level
                 </div>

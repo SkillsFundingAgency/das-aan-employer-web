@@ -130,11 +130,11 @@
 }
 
 .app-calendar__event--Hybrid {
-  border-color: #85994b;
+  border-color: #6a7b3d;
 }
 
 .app-calendar__event--InPerson {
-  border-color: #6f72af;
+  border-color: #6b71ae;
 }
 
 .app-calendar__event--Online {
@@ -182,11 +182,11 @@ a.app-calendar__event:focus {
 }
 
 .app-calendar-legend__colour--hybrid {
-  background-color: #85994b;
+  background-color: #6a7b3d;
 }
 
 .app-calendar-legend__colour--inperson {
-  background-color: #6f72af;
+  background-color: #6b71ae;
 }
 
 .app-calendar-legend__colour--online {
@@ -265,11 +265,11 @@ a.app-calendar__event:focus {
 }
 
 .app-tag--Hybrid {
-  background-color: #85994b;
+  background-color: #6a7b3d;
 }
 
 .app-tag--InPerson {
-  background-color: #6f72af;
+  background-color: #6b71ae;
 }
 
 .app-tag--Online {
